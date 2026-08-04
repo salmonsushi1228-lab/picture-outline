@@ -42,7 +42,7 @@ import httpx
 from theme import Colors, Radius, Spacing, app_theme, badge_color_for_score
 
 
-DEFAULT_SERVER_URL = "https://your-domain.com"
+DEFAULT_SERVER_URL = "https://12284693.kro.kr/"
 FRAME_INTERVAL_SEC = 1.3
 
 
