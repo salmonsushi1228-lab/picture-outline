@@ -1,1 +1,19 @@
+[project]
+name = "poseframe"
+version = "1.0.0"
+description = "AI 포즈 가이드 카메라 - 안드로이드 클라이언트"
+requires-python = ">=3.11"
+dependencies = [
+    "flet>=0.81.0",
+    "flet-camera",
+    "httpx>=0.27.0",
+]
 
+[tool.flet]
+org = "com.example"
+product = "PoseFrame"
+
+# 안드로이드 카메라 권한 (마이크는 사용하지 않으므로 요청하지 않음)
+[tool.flet.android.permission]
+"android.permission.CAMERA" = true
+"android.permission.INTERNET" = true
