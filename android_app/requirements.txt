@@ -1,1 +1,3 @@
-
+flet>=0.81.0
+flet-camera
+httpx>=0.27.0
