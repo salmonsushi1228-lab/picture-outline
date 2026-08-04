@@ -42,7 +42,7 @@ import httpx
 from theme import Colors, Radius, Spacing, app_theme, badge_color_for_score
 
 
-DEFAULT_SERVER_URL = "http://192.168.0.10:8000"
+DEFAULT_SERVER_URL = "https://your-domain.com"
 FRAME_INTERVAL_SEC = 1.3
 
 
@@ -204,7 +204,7 @@ async def main(page: ft.Page) -> None:
     server_url_field = ft.TextField(
         label="분석 서버 주소",
         value=state.server_url,
-        hint_text="예: http://192.168.0.12:8000",
+        hint_text="예: https://your-domain.com",
         border_color=Colors.BORDER,
         color=Colors.TEXT_PRIMARY,
     )
@@ -226,8 +226,8 @@ async def main(page: ft.Page) -> None:
                 [
                     ft.Text(
                         "이 앱은 촬영한 사진을 분석 서버로 보내 포즈를 비교합니다. "
-                        "같은 Wi-Fi에 연결된 컴퓨터에서 서버(server/app.py)를 먼저 실행한 뒤, "
-                        "그 컴퓨터의 사설 IP 주소를 아래에 입력하세요.",
+                        "서버(server/app.py)가 배포된 도메인 주소(https://...)를 아래에 "
+                        "입력하세요. 도메인이 연결되어 있으면 Wi-Fi/이동통신 어디서든 접속됩니다.",
                         size=12, color=Colors.TEXT_SECONDARY,
                     ),
                     server_url_field,
